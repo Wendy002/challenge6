@@ -22,7 +22,7 @@ const getDaysInMonth = (date) => new Date(date.getFullYear(), date.getMonth() + 
 const createArray = (length) => {
     const result = []
 
-    for (let  = ; i < length; i) {
+    for (let i = 0; i < length; i++) {
         result.push()
     }
 
