@@ -29,15 +29,15 @@ const createArray = (length) => {
     return result
 }
 
-const createData = () > {
-    const current = new ()
-    current.set(1)
+const createData = () => {
+    const current = new Date()
+    current.setDate(1)
 
-    const startDay = current.get()
+    const startDay = current.getDay()
     const daysInMonth = getDaysInMonth(current)
 
     const weeks = createArray(5)
-    const days = ()
+    const days = createArray(7)
     const result = []
 
     for (const weekIndex of weeks) {
@@ -46,8 +46,8 @@ const createData = () > {
             days: []
         })
 
-        for (const  of ) {
-            const day = (dayIndex - startDay) : (weekIndex * 7)  1
+        for (const  dayIndex of days) {
+            const day = (dayIndex - startDay)?  (weekIndex * 7 + (dayIndex -startDay+1)) : weekIndex  * 7 + 1
             const isValid = day > 0 && day <= daysInMonth
 
             result[weekIndex].days.push({
